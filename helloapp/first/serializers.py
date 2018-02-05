@@ -9,7 +9,7 @@ class LocationSerializer(serializers.ModelSerializer):
 class FamilySerializer(serializers.ModelSerializer):
     class Meta:
         model = Family 
-        fields = ('reference', 'title', 'description','unit','minQuantity')
+        fields = ('title', 'description','unit','minQuantity')
 
 class ProductSerializer(serializers.ModelSerializer):
 
