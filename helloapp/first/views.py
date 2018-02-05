@@ -10,6 +10,12 @@ from rest_framework.response import Response
 from .models import Product , Location ,Family ,Transaction 
 from .serializers import *  
 #end-rest
+
+class ExamList(generics.GenericAPIView):
+    template_name = 'exam-list.html'
+    def get(self, request):
+        return render(request, self.template_name)
+
 class IndexPageView(generics.GenericAPIView):
     template_name = 'home.html'
     def get(self, request):

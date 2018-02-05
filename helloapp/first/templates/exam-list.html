@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html ng-app="app">
+    <head>
+        <meta charset="utf-8">
+        <title>Angular Sample</title>
+
+        <!--  Angular Setup -->
+        <div ng-controller="ExamListCtrl">
+            {% verbatim %}
+            <div>
+                {{ name }}                
+            </div>
+            {% endverbatim %}
+          </div>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-resource.js"></script>
+        <script src="https://unpkg.com/@uirouter/angularjs@1.0.14/release/angular-ui-router.min.js"></script>
+        <script src="{% static "exam-list/exam.module.js" %}"></script>
+        <script src="{% static "exam-list/exam.controllers.js" %}"></script>
+              
+    </head>
+    <body>
+        <!-- The dynamic templates will be served within this div -->
+        <ui-view></ui-view>
+    </body>
+</html>
