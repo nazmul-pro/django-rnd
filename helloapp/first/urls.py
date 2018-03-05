@@ -14,5 +14,5 @@ urlpatterns = [
     url(r'^locations/(?P<pk>[0-9]+)$', views.location_detail.as_view()),
     url(r'^transactions/$', views.transaction_list.as_view()),
     url(r'^transactions/(?P<pk>[0-9]+)$', views.transaction_detail.as_view()),
-    url(r'^exam/', views.ExamList.as_view()),
+    url(r'^preparation/', views.ExamList.as_view()),
 ]

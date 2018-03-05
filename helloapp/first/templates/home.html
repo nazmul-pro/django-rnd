@@ -1,28 +1,28 @@
 {% load static %}
-<!DOCTYPE html>
-
-<html ng-app="app">
+<!doctype html><html lang="en">
     <head>
-        <meta charset="utf-8">
-        <title>Angular Sample</title>
-
-        <!--  Angular Setup -->
-        <div ng-controller="MainCtrl">
-                {% verbatim %}
-            <ul>
-                <li ng-repeat="item in items">
-                    {{ item }}
-                </li>
-            </ul>
-            {% endverbatim %}
-          </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-resource.js"></script>
-        <script src="{% static "index.module.js" %}"></script>
-        <script src="{% static "index.controller.js" %}"></script>      
-    </head>
-    <body>
-        <!-- The dynamic templates will be served within this div -->
-        <ui-view></ui-view>
-    </body>
+        <meta charset="utf-8"><title>Exam For Today</title>
+        <base href="/"><!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <link href="{% static 'dist/styles.3035cca142ed045eecdb.bundle.css' %}" rel="stylesheet"/>
+        </head>
+        <body>
+            <app-root></app-root>
+            <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js">
+            </script><!-- Compiled and minified JavaScript -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+            <script type="text/javascript">$(document).ready(function(){
+    $('.parallax').parallax();
+});
+$(document).ready(function() {
+    $('select').material_select();
+});</script>
+<script type="text/javascript" src="{% static 'dist/inline.12ca503598715887c265.bundle.js' %}"></script>
+<script type="text/javascript" src="{% static 'dist/polyfills.f20484b2fa4642e0dca8.bundle.js' %}"></script>
+<script type="text/javascript" src="{% static 'dist/main.89b8d98faa9e50da17c8.bundle.js' %}"></script>
+</body>
 </html>
