@@ -4,7 +4,7 @@ from django.contrib import admin
 from first import views
 
 urlpatterns = [
-    url(r'^$', views.IndexPageView.as_view(), name='index'),
+    url(r'^.*', views.IndexPageView.as_view(), name='index'),
     # url(r'^admin/', admin.site.urls),
     # url(r'^products/$', views.product_list),
     # url(r'^products/(?P<pk>[0-9]+)$', views.product_detail),
